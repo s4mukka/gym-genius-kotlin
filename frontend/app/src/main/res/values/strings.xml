@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">GymGenius</string>
+    <string name="add_workout">Adicionar Novo Treinamento</string>
 </resources>
