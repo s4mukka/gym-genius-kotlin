@@ -1,4 +1,4 @@
-package com.example.gymgenius
+package com.example.gymgenius.models
 
 data class Workout(var name: String) {
 }
