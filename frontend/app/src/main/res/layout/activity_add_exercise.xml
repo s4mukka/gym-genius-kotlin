@@ -16,7 +16,7 @@
         android:id="@+id/searchExercise"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:hint="Pesquisar" />
+        android:hint="@string/search" />
 
     <View
         android:id="@+id/divider"

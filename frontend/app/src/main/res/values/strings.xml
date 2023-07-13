@@ -2,4 +2,8 @@
     <string name="app_name">GymGenius</string>
     <string name="add_workout">Adicionar Novo Treinamento</string>
     <string name="title_activity_login">LoginActivity</string>
+    <string name="add_exercise">+ Adicionar Exercício</string>
+    <string name="search">Pesquisar</string>
+    <string name="finish">Concluir</string>
+    <string name="workout_name">Nome do Treino</string>
 </resources>

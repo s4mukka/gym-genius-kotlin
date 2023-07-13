@@ -17,14 +17,14 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_toLeftOf="@+id/addWorkoutButton"
-        android:hint="Nome do Treino" />
+        android:hint="@string/workout_name" />
 
     <Button
         android:id="@+id/addWorkoutButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:text="Concluir" />
+        android:text="@string/finish" />
 
     <View
         android:id="@+id/divider"
@@ -49,6 +49,6 @@
         android:layout_below="@id/exercises"
         android:background="@drawable/dashed_button"
         android:textColor="@color/blue_500"
-        android:text="+ Adicionar Exercício" />
+        android:text="@string/add_exercise" />
 
 </RelativeLayout>
