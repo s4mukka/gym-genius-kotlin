@@ -10,21 +10,13 @@
     android:paddingTop="32dp"
     android:paddingRight="16dp"
     android:paddingBottom="32dp"
-    tools:context=".AddWorkoutActivity">
+    tools:context=".AddExerciseActivity">
 
-    <EditText
-        android:id="@+id/workoutNameEditText"
+    <android.widget.SearchView
+        android:id="@+id/searchExercise"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_toLeftOf="@+id/addWorkoutButton"
-        android:hint="Nome do Treino" />
-
-    <Button
-        android:id="@+id/addWorkoutButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:text="Concluir" />
+        android:hint="Pesquisar" />
 
     <View
         android:id="@+id/divider"
@@ -32,7 +24,7 @@
         android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_below="@id/addWorkoutButton"
+        android:layout_below="@+id/searchExercise"
         android:background="@android:color/darker_gray"/>
 
     <androidx.recyclerview.widget.RecyclerView
@@ -41,14 +33,4 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/divider"
         />
-
-    <Button
-        android:id="@+id/addExercise"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/exercises"
-        android:background="@drawable/dashed_button"
-        android:textColor="@color/blue_500"
-        android:text="+ Adicionar Exercício" />
-
 </RelativeLayout>

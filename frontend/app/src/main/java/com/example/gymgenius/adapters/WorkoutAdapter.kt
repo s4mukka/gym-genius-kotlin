@@ -18,18 +18,15 @@ class WorkoutsAdapter(var context: AppCompatActivity) : RecyclerView.Adapter<Wor
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WorkoutViewHolder {
         val itemView = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_workout, parent, false)
-        Log.d("WorkoutsAdapter", "onCreateViewHolder")
         return WorkoutViewHolder(itemView)
     }
 
     override fun onBindViewHolder(holder: WorkoutViewHolder, position: Int) {
         val workout = workouts[position]
         holder.bind(workout)
-        Log.d("WorkoutsAdapter", "onBindViewHolder")
     }
 
     override fun getItemCount(): Int {
-        Log.d("WorkoutsAdapter", "getItemCount " + workouts.size)
         return workouts.size
     }
 
@@ -37,7 +34,6 @@ class WorkoutsAdapter(var context: AppCompatActivity) : RecyclerView.Adapter<Wor
         private val workoutNameTextView: TextView = itemView.findViewById(R.id.workoutNameTextView)
 
         fun bind(workout: Workout) {
-            Log.d("WorkoutViewHolder", "bind")
             workoutNameTextView.text = workout.name
         }
     }

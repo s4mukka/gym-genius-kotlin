@@ -13,10 +13,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.gymgenius.adapters.WorkoutsAdapter
 import com.example.gymgenius.models.Workout
+import com.example.gymgenius.repositories.WorkoutRepository
 
 class WorkoutsActivity : AppCompatActivity() {
     private lateinit var workoutsRecyclerView: RecyclerView
     private val ADD_WORKOUT_REQUEST_CODE = 1
+    private val workoutRepository = WorkoutRepository(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,7 +28,6 @@ class WorkoutsActivity : AppCompatActivity() {
         addButton.setOnClickListener{
             val intent = Intent(this, AddWorkoutActivity::class.java)
             this.startActivity(intent)
-            Log.d("WorkoutsActivity", "Botão de adicionar treino clicado")
         }
     }
 
@@ -35,5 +36,10 @@ class WorkoutsActivity : AppCompatActivity() {
         workoutsRecyclerView = findViewById(R.id.workoutsRecyclerView)
         workoutsRecyclerView.layoutManager = LinearLayoutManager(this)
         workoutsRecyclerView.adapter = WorkoutsAdapter(this)
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        workoutRepository.clearWorkouts()
     }
 }
